@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Portal: Contact Us</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+<header>
+    <nav class="navbar">
+        <img class="logo" src="../media/image/logo.png" alt="D&D Portal">
+        <input type="search" placeholder="Search the site" aria-label="Search">
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../news/index.html">News</a></li>
+            <li><a href="../adventures/index.html">Adventures</a></li>
+            <li><a href="../monsters/index.html">Monsters</a></li>
+            <li><a href="index.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Contact Us</h1>
+
+    <!-- Two-column layout -->
+    <section id="contact" class="two-column" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" class="visually-hidden">Send us a message</h2>
+
+        <!-- Left column: form -->
+        <form action="mailto:youremail@example.com?subject=DnD%20Portal%20Contact"
+              method="post"
+              enctype="text/plain"
+              class="contact-form"
+              onsubmit="window.open('thankyou.html', '_blank')">
+
+            <!-- Fieldset 1: Details -->
+            <fieldset>
+                <legend>Your details</legend>
+
+                <p>
+                    <label for="name">Name</label><br>
+                    <input id="name" name="name" type="text" autocomplete="name" required>
+                </p>
+
+                <p>
+                    <label for="email">Email</label><br>
+                    <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="privacy-note">
+                </p>
+            </fieldset>
+
+            <!-- Fieldset 2: Message -->
+            <fieldset>
+                <legend>Your message</legend>
+
+                <p>
+                    <label for="subject">Subject</label><br>
+                    <input id="subject" name="subject" type="text" required>
+                </p>
+
+                <p>
+                    <label for="message">Message</label><br>
+                    <textarea id="message" name="message" rows="8" required></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Send</button>
+                </p>
+
+                <p><small id="privacy-note">Clicking “Send” will open your computer's default email app to complete the message. We’ll only use your email to reply.</small></p>
+            </fieldset>
+        </form>
+
+        <!-- Right column: image (hide on smaller viewports) -->
+        <aside class="contact-media" aria-label="Contact illustration">
+            <figure>
+                <img src="../media/image/young_adult_wizard_scribing.jpg"
+                     alt="Scholars writing letters."
+                     width="1200" height="1200" loading="lazy">
+                <figcaption class="visually-hidden">
+                    Atmospheric D&D-themed illustration beside the contact form.
+                </figcaption>
+            </figure>
+        </aside>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <small>&copy; 2025 D&D Adventures Portal | Designed by Laurence Sevilla</small>
+</footer>
+</body>
+</html>

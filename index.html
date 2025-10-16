@@ -1,0 +1,109 @@
+<!--
+
+Nombre:   Laurence Gretsch Sevilla Causing
+Fecha:    17/10/2026
+Modulo:   Lenguaje de Marcas y Sistemas de Gestión de Información.
+UD:       UD2 Desarrollo web con HTML5 y CSS3
+Tarea:    Tarea de Evaluación 02. Sitio web.
+Documento de relfexión: https://docs.google.com/document/d/1TI7_QE2EAzPbWtJ9kji3NSS101NIdt0GpVqWau2xmC8/edit?tab=t.0
+GitHub Pages:
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Portal</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+<header>
+    <nav class="navbar">
+        <img class="logo" src="media/image/logo.png" alt="D&D Portal">
+        <input type="search" placeholder="Search the site" aria-label="Search">
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="news/index.html">News</a></li>
+            <li><a href="adventures/index.html">Adventures</a></li>
+            <li><a href="monsters/index.html">Monsters</a></li>
+            <li><a href="contact/index.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay muted loop playsinline>
+            <source src="media/video/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1 class="hero-title">D&D Portal</h1>
+        <p>Your gateway to the world of Dungeons & Dragons.</p>
+    </section>
+
+    <!-- News Section -->
+    <section id="featured-news" class="main-cards">
+        <h2>Latest News</h2>
+
+        <article id="latest-news" class="news-item">
+            <h3>Critical Role Campaign 4</h3>
+            <p>A new era dawns in Exandria—fresh faces, uncharted lands, and story hooks perfect for first-time viewers and longtime fans alike.</p>
+            <a href="https://www.critrole.com" target="_blank" rel="noopener noreferrer">Read more</a>
+        </article>
+
+        <article class="news-item">
+            <h3>Keep on the Borderlands</h3>
+            <p>The classic returns as a modern starter set with streamlined rules, session-zero prompts, and flexible paths from one-shot to mini-campaign.</p>
+            <a href="https://www.dndbeyond.com" target="_blank" rel="noopener noreferrer">Read more</a>
+        </article>
+
+        <article class="news-item">
+            <h3>Unearthed Arcana Playtest: Psionic</h3>
+            <p>Mind-bending options emphasize clever utility, social intrigue, and tactical positioning—tell the devs what works at your table.</p>
+            <a href="https://www.dndbeyond.com" target="_blank" rel="noopener noreferrer">Read more</a>
+        </article>
+    </section>
+
+    <!-- Featured Adventures -->
+    <section id="featured-adventures" class="main-cards">
+        <h2>Featured Adventures</h2>
+
+        <article class="adventure-item">
+            <a class="card-link" href="adventures/wotc/witchlight.html" aria-label="View more about The Wild Beyond the Witchlight">
+      <span class="thumb">
+        <img src="media/image/wild-beyond-witchlight-header.png.webp" alt="The Wild Beyond the Witchlight">
+      </span>
+                <h3>The Wild Beyond the Witchlight</h3>
+            </a>
+            <p>A whimsical Feywild romp where choices matter more than combat—bargains, carnival secrets, and storybook locales await.</p>
+            <p><a href="adventures/wotc/witchlight.html">View more →</a></p>
+        </article>
+
+        <article class="adventure-item">
+            <a class="card-link" href="adventures/wotc/avernus.html" aria-label="View more about Baldur's Gate: Descent into Avernus">
+      <span class="thumb">
+        <img src="media/image/avernus.jpg" alt="Baldur's Gate: Descent into Avernus">
+      </span>
+                <h3>Baldur's Gate: Descent into Avernus</h3>
+            </a>
+            <p>From city intrigue to the first layer of Hell, drive infernal war machines and bargain with devils in a high-octane campaign.</p>
+            <p><a href="adventures/wotc/avernus.html">View more →</a></p>
+        </article>
+    </section>
+
+    <!-- Call to Explore -->
+    <section id="explore-links" class="main-cards">
+        <h2>Discover More</h2>
+        <p>Looking for new quests, beasts, or updates from the multiverse? Visit the <a href="news/index.html">News</a>, <a href="adventures/index.html">Adventures</a>, or <a href="monsters/index.html">Monsters</a> sections to continue your journey.</p>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <small>&copy; 2025 D&D Adventures Portal | Designed by Laurence Sevilla</small>
+</footer>
+</body>
+</html>

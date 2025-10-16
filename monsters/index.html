@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Portal: Monsters</title>
+    <meta name="description" content="Browse monsters by type, challenge rating, and source.">
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+<header>
+    <nav class="navbar">
+        <img class="logo" src="../media/image/logo.png" alt="D&D Portal">
+        <input type="search" placeholder="Search the site" aria-label="Search">
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../news/index.html">News</a></li>
+            <li><a href="../adventures/index.html">Adventures</a></li>
+            <li><a href="index.html" class="active">Monsters</a></li>
+            <li><a href="../contact/index.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Monsters</h1>
+
+    <!-- Two-column layout: aside filters (left) + results (right) -->
+    <section id="monsters-layout" class="two-column" aria-labelledby="monsters-heading">
+        <h2 id="monsters-heading" class="visually-hidden">Monster directory</h2>
+
+        <!-- Filters / Facets -->
+        <aside id="filters" aria-labelledby="filters-heading">
+            <h3 id="filters-heading">Filter monsters</h3>
+
+            <!-- Search within monsters -->
+            <form action="#" method="get" class="monster-search" role="search">
+                <p><small>This filter section is for layout demonstration only!</small></p>
+                <p>
+                    <label for="q">Search monsters</label><br>
+                    <input id="q" name="q" type="search" placeholder="e.g., goblin, dragon" autocomplete="off">
+                </p>
+
+                <!-- Type -->
+                <fieldset>
+                    <legend>Type</legend>
+                    <p>
+                        <input type="checkbox" id="type-beast" name="type" value="beast">
+                        <label for="type-beast">Beast</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="type-fiend" name="type" value="fiend">
+                        <label for="type-fiend">Fiend</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="type-fey" name="type" value="fey">
+                        <label for="type-fey">Fey</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="type-humanoid" name="type" value="humanoid">
+                        <label for="type-humanoid">Humanoid</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="type-undead" name="type" value="undead">
+                        <label for="type-undead">Undead</label>
+                    </p>
+                </fieldset>
+
+                <!-- Challenge Rating -->
+                <fieldset>
+                    <legend>Challenge Rating</legend>
+                    <p>
+                        <label for="cr-min">Min</label>
+                        <input id="cr-min" name="cr_min" type="number" step="0.125" min="0" placeholder="0" inputmode="decimal">
+                    </p>
+                    <p>
+                        <label for="cr-max">Max</label>
+                        <input id="cr-max" name="cr_max" type="number" step="0.125" min="0" placeholder="20" inputmode="decimal">
+                    </p>
+                </fieldset>
+
+                <!-- Source / Publisher -->
+                <fieldset>
+                    <legend>Source</legend>
+                    <p>
+                        <input type="checkbox" id="src-wotc" name="src" value="wotc">
+                        <label for="src-wotc">Wizards of the Coast</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="src-ghostfire" name="src" value="ghostfire">
+                        <label for="src-ghostfire">Ghostfire Gaming</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="src-critrole" name="src" value="critrole">
+                        <label for="src-critrole">Critical Role</label>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Apply filters</button>
+                    <a href="index.html" aria-label="Reset monster filters to default">Reset</a>
+                </p>
+            </form>
+
+            <!-- Optional A–Z quick links -->
+            <nav aria-label="Alphabet quick links">
+                <ul class="alpha-nav">
+                    <li><a href="#A">A</a></li><li><a href="#B">B</a></li><li><a href="#C">C</a></li>
+                    <li><a href="#D">D</a></li><li><a href="#E">E</a></li><li><a href="#F">F</a></li>
+                    <li><a href="#G">G</a></li><li><a href="#H">H</a></li><li><a href="#I">I</a></li>
+                    <li><a href="#J">J</a></li><li><a href="#K">K</a></li><li><a href="#L">L</a></li>
+                    <li><a href="#M">M</a></li><li><a href="#N">N</a></li><li><a href="#O">O</a></li>
+                    <li><a href="#P">P</a></li><li><a href="#Q">Q</a></li><li><a href="#R">R</a></li>
+                    <li><a href="#S">S</a></li><li><a href="#T">T</a></li><li><a href="#U">U</a></li>
+                    <li><a href="#V">V</a></li><li><a href="#W">W</a></li><li><a href="#X">X</a></li>
+                    <li><a href="#Y">Y</a></li><li><a href="#Z">Z</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Results -->
+        <section id="results" aria-labelledby="results-heading">
+            <h3 id="results-heading">Results</h3>
+
+            <!-- Group A (example) -->
+            <section id="A" aria-labelledby="group-A">
+                <h4 id="group-A">A</h4>
+
+                <article class="monster-card">
+                    <header>
+                        <h5><a href="wotc/acolyte.html">Acolyte</a></h5>
+                        <p><small>Humanoid (any race) · CR 1/4</small></p>
+                    </header>
+                    <dl class="monster-description">
+                        <dt>Size</dt><dd>Medium</dd>
+                        <dt>Alignment</dt><dd>Any alignment</dd>
+                        <dt>Source</dt><dd>Wizards of the Coast</dd>
+                    </dl>
+                </article>
+
+                <article class="monster-card">
+                    <header>
+                        <h5><a href="wotc/animated-armor.html">Animated Armor</a></h5>
+                        <p><small>Construct · CR 1</small></p>
+                    </header>
+                    <dl class="monster-description">
+                        <dt>Size</dt><dd>Medium</dd>
+                        <dt>Alignment</dt><dd>Unaligned</dd>
+                        <dt>Source</dt><dd>Wizards of the Coast</dd>
+                    </dl>
+                </article>
+            </section>
+
+            <!-- Group G (example) -->
+            <section id="G" aria-labelledby="group-G">
+                <h4 id="group-G">G</h4>
+
+                <article class="monster-card">
+                    <header>
+                        <h5><a href="wotc/goblin.html">Goblin</a></h5>
+                        <p><small>Humanoid (goblinoid) · CR 1/4</small></p>
+                    </header>
+                    <dl class="monster-description">
+                        <dt>Size</dt><dd>Small</dd>
+                        <dt>Alignment</dt><dd>Neutral Evil</dd>
+                        <dt>Source</dt><dd>Wizards of the Coast</dd>
+                    </dl>
+                </article>
+
+                <article class="monster-card">
+                    <header>
+                        <h5><a href="ghostfire/grimhollow-ghoul.html">Ghoul (Grim Hollow)</a></h5>
+                        <p><small>Undead · CR 1</small></p>
+                    </header>
+                    <dl class="monster-description">
+                        <dt>Size</dt><dd>Medium</dd>
+                        <dt>Alignment</dt><dd>Chaotic Evil</dd>
+                        <dt>Source</dt><dd>Ghostfire Gaming</dd>
+                    </dl>
+                </article>
+            </section>
+
+            <!-- Group I (example) -->
+            <section id="I" aria-labelledby="group-I">
+                <h4 id="group-I">I</h4>
+
+                <article class="monster-card">
+                    <header>
+                        <h5><a href="wotc/imp.html">Imp</a></h5>
+                        <p><small>Fiend (devil) · CR 1</small></p>
+                    </header>
+                    <dl class="monster-description">
+                        <dt>Size</dt><dd>Tiny</dd>
+                        <dt>Alignment</dt><dd>Lawful Evil</dd>
+                        <dt>Source</dt><dd>Wizards of the Coast</dd>
+                    </dl>
+                </article>
+            </section>
+        </section>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <small>&copy; 2025 D&D Adventures Portal | Designed by Laurence Sevilla</small>
+</footer>
+</body>
+</html>
